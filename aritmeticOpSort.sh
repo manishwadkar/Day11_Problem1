@@ -17,3 +17,5 @@ echo $ArithmeticOp2
 ArithmeticOp3=$(($c+$a/$b))
 echo $ArithmeticOp3
 
+ArithmeticOp4=$(($a%$b+$c))
+echo $ArithmeticOp4
