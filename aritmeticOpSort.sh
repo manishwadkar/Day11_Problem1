@@ -10,3 +10,6 @@ echo $a $b $c
 
 ArithmeticOp1=$(($a+$b*$c))
 echo $ArithmeticOp1
+
+ArithmeticOp2=$(($a*$b+$c))
+echo $ArithmeticOp2
