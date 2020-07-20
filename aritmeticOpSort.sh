@@ -28,3 +28,17 @@ for key in ${!comp_d[@]}
 do
         echo "$key = ${comp_d[$key]}"
 done
+
+i=0
+for key in ${!comp_d[@]}
+do
+	arr[$i]=${comp_d[$key]}
+	i=$(($i+1))
+done
+
+echo "Array: "
+echo ${arr[@]}
+n=${#arr[@]}
+echo $n
+
+
