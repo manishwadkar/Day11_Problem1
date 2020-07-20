@@ -9,13 +9,22 @@ read -p "Enter 3rd number " c
 echo $a $b $c
 
 ArithmeticOp1=$(($a+$b*$c))
-echo $ArithmeticOp1
 
 ArithmeticOp2=$(($a*$b+$c))
-echo $ArithmeticOp2
 
 ArithmeticOp3=$(($c+$a/$b))
-echo $ArithmeticOp3
 
 ArithmeticOp4=$(($a%$b+$c))
-echo $ArithmeticOp4
+
+declare -A comp_d
+
+comp_d[a+b*c]=$ArithmeticOp1
+comp_d[a*b+c]=$ArithmeticOp2
+comp_d[c+a/b]=$ArithmeticOp3
+comp_d[a%b+c]=$ArithmeticOp4
+
+echo "Dictionary: "
+for key in ${!comp_d[@]}
+do
+        echo "$key = ${comp_d[$key]}"
+done
